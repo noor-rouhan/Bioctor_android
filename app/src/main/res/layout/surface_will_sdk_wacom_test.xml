@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/filesList"
+            android:choiceMode="singleChoice"
+            android:listSelector="@android:color/darker_gray"
+            android:layout_weight="0.7"
+            ></ListView>
+
+        <com.wacom.inkcanvas.views.InkView
+            android:layout_height="match_parent"
+            android:id="@+id/mInkView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="match_parent"
+            android:layout_weight="0.3"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

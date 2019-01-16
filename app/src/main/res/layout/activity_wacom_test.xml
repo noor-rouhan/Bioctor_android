@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/topLabel"
+        android:textAlignment="center"
+        />
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/scanBtn"
+        android:id="@+id/scanListView"
+        android:layout_below="@+id/topLabel"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scanBtn"
+        android:text="scan"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:onClick="scanBtn_OnClick"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/liveModeBtn"
+            android:text="live Mode"
+            android:onClick="liveModeBtn_OnClick"
+            android:enabled="false"
+            android:visibility="invisible"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/transferFilesBtn"
+            android:text="transfer file"
+            android:onClick="transferFilesBtn_OnClick"
+            android:enabled="false"
+            android:clickable="false"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
