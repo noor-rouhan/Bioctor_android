@@ -2,31 +2,44 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/linearLayout5"
+    android:id="@+id/surface_will_sdk"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+   <!-- tools:context="com.wacom.samples.cdlsampleapp.FileTransferActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+
+
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
         <ListView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:id="@+id/filesList"
-            android:choiceMode="singleChoice"
-            android:listSelector="@android:color/darker_gray"
-            android:layout_weight="0.7"
-            ></ListView>
-
-        <com.wacom.inkcanvas.views.InkView
-            android:layout_height="match_parent"
-            android:id="@+id/mInkView"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
             android:layout_width="match_parent"
-            android:layout_weight="0.3"
-            />
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:choiceMode="singleChoice"
+            android:listSelector="@android:color/darker_gray" />
+
+        <SurfaceView
+            android:id="@+id/surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3" />
+
     </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/fab"
+        app:srcCompat="@drawable/ic_create_black_24dp" />
 
 </RelativeLayout>
